@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEB</title>
+</head>
+<body>
+
+    <center>
+    <h1>FAKULTAS EKONOMI DAN BISNIS</h1>
+    </center>
+    
+    <p align="justify">Fakultas Ekonomi dan Bisnis merupakan fakultas favorit di Untirta. Sebab, program studi manajemen selalu menjadi program studi yang paling diminati. Buktinya, pada tahun 2019/2020 jumlah mahasiswa baru FEB Untirta mencapai 551 orang yang mana jumlah ini menjadi peringkat ketiga fakultas yang memiliki jumlah mawasiswa terbanyak setelah FKIP dan FT. </p>
+    <p><b><i>Prodi Fakultas Ekonomi dan Bisnis, terdiri dari:</i></b></p>
+    
+    {% for judul in judul %}
+        <li>{{ judul}}</li>
+    {% endfor %}
+
+</body>
+</html>
