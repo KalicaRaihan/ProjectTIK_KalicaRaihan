@@ -1,0 +1,71 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNTIRTA | Universitas Sultan Ageng Tirtayasa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:hsl(204, 90%, 70%);">
+      <div class="container-fluid">
+        <img src="{% static 'untirta.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <i><b><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#16098b">Universitas Sultan Ageng Tirtayasa</a></b></i>
+            </li>
+            <li class="nav-item">
+              <b><a class="nav-link {% if navbar == 'home' %} active {% endif %}" href="{% url 'home' %}" style="color:	#16098b">Home</a></b>
+            </li>
+            <b><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                FAKULTAS
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                <li><a class="dropdown-item {% if dropdown == 'faperta' %} active {% endif %}" href="{% url 'faperta' %}" style="color:	#000000">FAPERTA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'feb' %} active {% endif %}" href="{% url 'feb' %}" style="color:	#000000">FEB</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'fh' %} active {% endif %}" href="{% url 'fh' %}" style="color:	#000000">FH</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'fisip' %} active {% endif %}" href="{% url 'fisip' %}" style="color:	#000000">FISIP</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'fk' %} active {% endif %}" href="{% url 'fk' %}" style="color:	#000000">FK</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'fkip' %} active {% endif %}" href="{% url 'fkip' %}" style="color:	#000000">FKIP</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'ft' %} active {% endif %}" href="{% url 'ft' %}" style="color:	#000000">FT</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item {% if dropdown == 'pascasarjana' %} active {% endif %}" href="{% url 'pascasarjana' %}" style="color:	#000000">PASCASARJANA</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+              </ul>
+            </li></b>
+            <li class="nav-item">
+              <b><a class="nav-link {% if navbar == 'about' %} active {% endif %}" href="{% url 'about' %}" style="color:#16098b">About</a></b>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+            <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+          </form>
+        </div>
+      </div>
+  </nav>
+  <!--penutup navbar-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <center><h1>Fakultas Ilmu Sosial dan Politik</h1></center>
+      <h4>- Program Studi Administrasi Publik</h4>
+      <h4>- Program Studi Ilmu Komunikasi</h4>
+      <h4>- Program Studi Ilmu Pemerintahan</h4>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
