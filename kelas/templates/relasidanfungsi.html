@@ -1,0 +1,144 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMP | Web Pembelajaran Matematika</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  </head>
+
+<body>
+    <!--bagian navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color:hsl(204, 90%, 70%);">
+        <div class="container-fluid">
+          <img src="{% static 'logo.png' %}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <i><b><a class="nav-link {% if navbar == 'index' %} active {% endif %}" aria-current="page" href="{% url 'index' %}" style="color:	#16098b">Matematika</a></b></i>
+              </li>
+              <li class="nav-item">
+                <b><a class="nav-link {% if navbar == 'home' %} active {% endif %}" href="{% url 'home' %}" style="color:	#16098b">Profil</a></b>
+              </li>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  VII Semester 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'bilangan' %} active {% endif %}" href="{% url 'bilangan' %}" style="color:	#000000">Bilangan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'himpunan' %} active {% endif %}" href="{% url 'himpunan' %}" style="color:	#000000">Himpunan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'bentukaljabar' %} active {% endif %}" href="{% url 'bentukaljabar' %}" style="color:	#000000">Bentuk Aljabar</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'persamaandanpertidaksamaanlinearsatuvariabel' %} active {% endif %}" href="{% url 'persamaandanpertidaksamaanlinearsatuvariabel' %}" style="color:	#000000">Persamaan dan Pertidaksamaan Linear Satu Variabel</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  VII Semester 2
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'perbandingan' %} active {% endif %}" href="{% url 'perbandingan' %}" style="color:	#000000">Perbandingan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'aritmetikasosial' %} active {% endif %}" href="{% url 'aritmetikasosial' %}" style="color:	#000000">Aritmetika Sosial</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'garisdansudut' %} active {% endif %}" href="{% url 'garisdansudut' %}" style="color:	#000000">Garis dan Sudut</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'segiempatdansegitiga' %} active {% endif %}" href="{% url 'segiempatdansegitiga' %}" style="color:	#000000">Segiempat dan Segitiga</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'penyajiandata' %} active {% endif %}" href="{% url 'penyajiandata' %}" style="color:	#000000">Penyajian Data</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  VIII Semester 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'polabilangan' %} active {% endif %}" href="{% url 'polabilangan' %}" style="color:	#000000">Pola Bilangan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'bidangkartesius' %} active {% endif %}" href="{% url 'bidangkartesius' %}" style="color:	#000000">Bidang Kartesius</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'relasidanfungsi' %} active {% endif %}" href="{% url 'relasidanfungsi' %}" style="color:	#000000">Relasi dan Fungsi</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'persamaangarislurus' %} active {% endif %}" href="{% url 'persamaangarislurus' %}" style="color:	#000000">Persamaan Garis Lurus</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'persamaanlinearduavariabel' %} active {% endif %}" href="{% url 'persamaanlinearduavariabel' %}" style="color:	#000000">Persamaan Linear Dua Variabel</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'teoremapythagoras' %} active {% endif %}" href="{% url 'teoremapythagoras' %}" style="color:	#000000">Teorema Pythagoras</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  VIII Semester 2
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'lingkaran' %} active {% endif %}" href="{% url 'lingkaran' %}" style="color:	#000000">Lingkaran</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'bangunruangsisidatar' %} active {% endif %}" href="{% url 'bangunruangsisidatar' %}" style="color:	#000000">Bangun Ruang Sisi Datar</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'statistika' %} active {% endif %}" href="{% url 'statistika' %}" style="color:	#000000">Statistika</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'peluang' %} active {% endif %}" href="{% url 'peluang' %}" style="color:	#000000">Peluang</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  IX Semester 1
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'bilanganberpangkatdanbentukakar' %} active {% endif %}" href="{% url 'bilanganberpangkatdanbentukakar' %}" style="color:	#000000">Bilangan Berpangkat dan Bentuk Akar</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'persamaankuadrat' %} active {% endif %}" href="{% url 'persamaankuadrat' %}" style="color:	#000000">Persamaan Kuadrat</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'fungsikuadrat' %} active {% endif %}" href="{% url 'fungsikuadrat' %}" style="color:	#000000">Fungsi Kuadrat</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+              <b><li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:	#16098b">
+                  IX Semester 2
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" style="background-color:#FFFFFF;">
+                  <li><a class="dropdown-item {% if dropdown == 'transformasi' %} active {% endif %}" href="{% url 'transformasi' %}" style="color:	#000000">Transformasi</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'kekongruenandankesebangunan' %} active {% endif %}" href="{% url 'kekongruenandankesebangunan' %}" style="color:	#000000">Kekongruenan dan Kesebangunan</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item {% if dropdown == 'bangunruangsisilengkung' %} active {% endif %}" href="{% url 'bangunruangsisilengkung' %}" style="color:	#000000">Bangun Ruang Sisi Lengkung</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#" style="color:	#000000">Something else here</a></li>
+                </ul>
+              </li></b>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" >
+              <button class="btn btn-outline-success" type="submit" style="color:#FFFFFF">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+  <!--penutup navbar-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <center><h1>Relasi dan Fungsi</h1></center>
+      <h4>- Relasi</h4>
+      <h4>- Fungsi atau pemetaan</h4>
+      <h4>- Ciri-ciri relasi dan fungsi</h4>
+      <h4>- Rumus fungsi</h4>        
+      <h4>- Grafik fungsi</h4>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

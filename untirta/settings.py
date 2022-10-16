@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-(p*x*o)s3zr!r5#(g_1-frt!#0b!2dm1+fo3_hvxjc#oim4gjh'
+SECRET_KEY = 'django-insecure-53-jfye1rj%-1#c(7%0h*3h0s$yn)r1%74a$q)0oic7rv0n)pd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fakultas.apps.FakultasConfig',
+    'kelas.apps.KelasConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,5 +112,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / 'static'
 ]

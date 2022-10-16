@@ -1,0 +1,32 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('home/', views.home, name='home'),
+    path('aritmetikasosial/', views.aritmetikasosial, name='aritmetikasosial'),
+    path('bangunruangsisidatar/', views.bangunruangsisidatar, name='bangunruangsisidatar'),
+    path('bangunruangsisilengkung/', views.bangunruangsisilengkung, name='bangunruangsisilengkung'),
+    path('bentukaljabar/', views.bentukaljabar, name='bentukaljabar'),
+    path('bidangkartesius/', views.bidangkartesius, name='bidangkartesius'),
+    path('bilangan/', views.bilangan, name='bilangan'),
+    path('bilanganberpangkatdanbentukakar/', views.bilanganberpangkatdanbentukakar, name='bilanganberpangkatdanbentukakar'),
+    path('fungsikuadrat/', views.fungsikuadrat, name='fungsikuadrat'),
+    path('garisdansudut/', views.garisdansudut, name='garisdansudut'),
+    path('himpunan/', views.himpunan, name='himpunan'),
+    path('kekongruenandankesebangunan/', views.kekongruenandankesebangunan, name='kekongruenandankesebangunan'),
+    path('lingkaran/', views.lingkaran, name='lingkaran'),
+    path('peluang/', views.peluang, name='peluang'),
+    path('penyajiandata/', views.penyajiandata, name='penyajiandata'),
+    path('perbandingan/', views.perbandingan, name='perbandingan'),
+    path('persamaandanpertidaksamaanlinearsatuvariabel/', views.persamaandanpertidaksamaanlinearsatuvariabel, name='persamaandanpertidaksamaanlinearsatuvariabel'),
+    path('persamaangarislurus/', views.persamaangarislurus, name='persamaangarislurus'),
+    path('persamaankuadrat/', views.persamaankuadrat, name='persamaankuadrat'),
+    path('persamaanlinearduavariabel/', views.persamaanlinearduavariabel, name='persamaanlinearduavariabel'),
+    path('polabilangan/', views.polabilangan, name='polabilangan'),
+    path('relasidanfungsi/', views.relasidanfungsi, name='relasidanfungsi'),
+    path('segiempatdansegitiga/', views.segiempatdansegitiga, name='segiempatdansegitiga'),
+    path('statistika/', views.statistika, name='statistika'),
+    path('teoremapythagoras/', views.teoremapythagoras, name='teoremapythagoras'),
+    path('transformasi/', views.transformasi, name='transformasi'),
+]
